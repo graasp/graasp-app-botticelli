@@ -91,7 +91,7 @@
     "prettier": "3.3.3",
     "uuid": "9.0.1",
     "vite": "5.4.3",
-    "vite-plugin-checker": "0.7.2",
+    "vite-plugin-checker": "0.8.0",
     "vite-plugin-istanbul": "6.0.2"
   },
   "browserslist": {
