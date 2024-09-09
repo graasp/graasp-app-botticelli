@@ -28,6 +28,10 @@ import { Member } from '@graasp/sdk';
 import { format } from 'date-fns';
 
 import { hooks, mutations } from '@/config/queryClient';
+import {
+  CONVERSATIONS_VIEW_TITLE_CY,
+  EXPORT_ALL_BUTTON_CY,
+} from '@/config/selectors';
 import MessagesPane from '@/modules/message/MessagesPane';
 import Exchange from '@/types/Exchange';
 import Interaction from '@/types/Interaction';
@@ -77,7 +81,9 @@ const Conversations: FC<Props> = ({
   ): string => {
     const headers: string[] = [
       'Participant',
+      'Participand ID',
       'Sender',
+      'Sender ID',
       'Sent at',
       'Exchange',
       'Interaction',
@@ -92,7 +98,9 @@ const Conversations: FC<Props> = ({
             exchange.messages.map((message: Message): string =>
               [
                 interactionData.participant.name,
+                interactionData.participant.id,
                 message.sender.name,
+                message.sender.id,
                 format(new Date(message.sentAt || ''), 'dd/MM/yyyy HH:mm'),
                 exchange.name,
                 interactionData.name,
@@ -111,10 +119,7 @@ const Conversations: FC<Props> = ({
     // map data rows
     return csvRows.join('\n');
   };
-  /*
-  ...data.map((row) =>
-    headers.map((header) => JSON.stringify(row[header] || '')).join(','),
-*/
+
   // Function to download CSV file
   const downloadCsv: (csv: string, filename: string) => void = (
     csv: string,
@@ -145,7 +150,9 @@ const Conversations: FC<Props> = ({
   return (
     <Stack spacing={2}>
       <Stack direction="row" justifyContent="space-between">
-        <Typography variant="h5">{t('CONVERSATIONS.TITLE')}</Typography>
+        <Typography variant="h5" data-cy={CONVERSATIONS_VIEW_TITLE_CY}>
+          {t('CONVERSATIONS.TITLE')}
+        </Typography>
         <Button
           disabled={appDatas?.length === 0}
           onClick={(): void =>
@@ -154,6 +161,7 @@ const Conversations: FC<Props> = ({
               `chatbot_all_${format(new Date(), 'yyyyMMdd_HH.mm')}.csv`,
             )
           }
+          data-cy={EXPORT_ALL_BUTTON_CY}
         >
           {t('CONVERSATIONS.EXPORT_ALL')}
         </Button>

@@ -132,13 +132,20 @@ const ParticipantInteraction = (): ReactElement => {
   // Ref to track if the app data has already been posted
   const hasPosted: MutableRefObject<boolean> = useRef(!!currentAppData);
 
+  useEffect(() => {
+    if (currentAppData) {
+      // Set hasPosted to true when currentAppData is available
+      hasPosted.current = true;
+    }
+  }, [currentAppData]);
+
   // Effect to post the interaction data if it hasn't been posted yet
   useEffect((): void => {
-    if (!hasPosted.current && interaction) {
+    if (!appDataLoading && !hasPosted.current && interaction) {
       postAppData({ data: interaction, type: 'Interaction' });
       hasPosted.current = true;
     }
-  }, [interaction, postAppData]);
+  }, [appDataLoading, interaction, postAppData]);
 
   // Effect to patch the interaction data if it has been posted and current app data exists
   useEffect((): void => {
@@ -255,9 +262,9 @@ const ParticipantInteraction = (): ReactElement => {
         <Button
           variant="contained"
           size="large"
-          data-cy={START_INTERACTION_BUTTON_CY}
           sx={{ mt: 3, mx: 'auto' }}
           onClick={handleStartInteraction}
+          data-cy={START_INTERACTION_BUTTON_CY}
         >
           {t('START')}
         </Button>
