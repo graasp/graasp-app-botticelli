@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.1.0](https://github.com/graasp/graasp-app-botticelli/compare/v1.0.0...v1.1.0) (2024-09-18)
+
+
+### Features
+
+* add export functionality ([#4](https://github.com/graasp/graasp-app-botticelli/issues/4)) ([#65](https://github.com/graasp/graasp-app-botticelli/issues/65)) ([e1a0411](https://github.com/graasp/graasp-app-botticelli/commit/e1a041151d256df540a34403abe69d581f8e8cb1))
+* make chatbot configurable ([#1](https://github.com/graasp/graasp-app-botticelli/issues/1)) ([e138776](https://github.com/graasp/graasp-app-botticelli/commit/e1387769d3db218cdb4aeb8cd90cc163ea3fad54))
+* show conversations ([#60](https://github.com/graasp/graasp-app-botticelli/issues/60)) ([6ff29d1](https://github.com/graasp/graasp-app-botticelli/commit/6ff29d1888c3133bb63a992f04222a94af9ad182))
+
+
+### Bug Fixes
+
+* correctly handle creation and patching of app data ([#67](https://github.com/graasp/graasp-app-botticelli/issues/67)) ([efad012](https://github.com/graasp/graasp-app-botticelli/commit/efad012cf93f193af73a084f6d7d2e2c624fa8b8))
+* **deps:** update dependency @mui/lab to v5.0.0-alpha.173 ([b71df34](https://github.com/graasp/graasp-app-botticelli/commit/b71df3484a6779d09bbdab57857142052392c2ef))
+* **deps:** update dependency @sentry/react to v7.119.0 ([b5c927c](https://github.com/graasp/graasp-app-botticelli/commit/b5c927cfa1b8074b3fd0d3588ff118a66d71d6aa))
+* **deps:** update dependency @types/node to v20.16.2 ([fa8e139](https://github.com/graasp/graasp-app-botticelli/commit/fa8e139d5a4d942c3e79632bb01f18f6ce31dbce))
+* **deps:** update dependency @types/node to v20.16.3 ([4d4fa9e](https://github.com/graasp/graasp-app-botticelli/commit/4d4fa9e41c355f70a0ff32343d41c2cd7f40c391))
+* **deps:** update dependency @types/node to v20.16.5 ([5e3df53](https://github.com/graasp/graasp-app-botticelli/commit/5e3df53082c1e2ebf4e34c523169d4d1c6187de4))
+* **deps:** update dependency @types/react to v18.2.79 ([98ffa1d](https://github.com/graasp/graasp-app-botticelli/commit/98ffa1da6986fa98d6382ca92fcfa15de2fad596))
+* **deps:** update dependency @types/react to v18.3.7 ([43c493f](https://github.com/graasp/graasp-app-botticelli/commit/43c493fba7b6a7a85a295a358bc9731c732f86b2))
+* **deps:** update dependency i18next to v23.14.0 ([7e665fd](https://github.com/graasp/graasp-app-botticelli/commit/7e665fdc7de6982f43ed42f0819667eb7cbc5173))
+* **deps:** update dependency i18next to v23.15.0 ([392ca30](https://github.com/graasp/graasp-app-botticelli/commit/392ca30383831e5d1970efc729016a02ecd440d5))
+* **deps:** update dependency i18next to v23.15.1 ([be53e26](https://github.com/graasp/graasp-app-botticelli/commit/be53e26b3c48e6b8a34f2bcb2cc2c1300ba7d41e))
+* **deps:** update dependency react-content-loader to v7.0.2 ([b773682](https://github.com/graasp/graasp-app-botticelli/commit/b773682d6f9532b238d7667387667980f024b176))
+* **deps:** update dependency react-i18next to v14.1.3 ([564e9e5](https://github.com/graasp/graasp-app-botticelli/commit/564e9e5ff13d309a1508e730fc5eb42dcc7f4766))
+* **deps:** update dependency typescript to v5.5.4 ([4e2149e](https://github.com/graasp/graasp-app-botticelli/commit/4e2149e705cff9d8741f5c4513adf3135d8eadce))
+* **deps:** update dependency typescript to v5.6.2 ([19d7ba1](https://github.com/graasp/graasp-app-botticelli/commit/19d7ba113cef6064fc8e620b2ef00b0fc3469650))
+* **deps:** update emotion monorepo ([dec2faa](https://github.com/graasp/graasp-app-botticelli/commit/dec2faac1591581e241b30f02708e86ec38a0347))
+* **deps:** update graasp packages ([b308254](https://github.com/graasp/graasp-app-botticelli/commit/b308254d7e3d0c16f939faf9db6b32d5c5fb4595))
+* **deps:** update mui (non-major) to v5.16.7 ([38369f2](https://github.com/graasp/graasp-app-botticelli/commit/38369f263aede8d474be05ac5c7109a76bdde351))
+* **deps:** update react monorepo ([7a6a27c](https://github.com/graasp/graasp-app-botticelli/commit/7a6a27cbca5820a2e983bad621b5665a6593071c))
+* fix duplicate appdata upon reload ([#8](https://github.com/graasp/graasp-app-botticelli/issues/8)) ([#73](https://github.com/graasp/graasp-app-botticelli/issues/73)) ([d79b0a3](https://github.com/graasp/graasp-app-botticelli/commit/d79b0a3039c6ee3dbd21295cff7f2928452b3830))
+* remove outdated Builder View cypress test ([ba98039](https://github.com/graasp/graasp-app-botticelli/commit/ba98039cd3a303ec51675cf5a218f68cd5829833))
+* update instructions ([0090a77](https://github.com/graasp/graasp-app-botticelli/commit/0090a7793e152e18e60496d433ff8ec603e7095f))
+
 ## 1.0.0 (2024-04-14)
 
 ### Features
