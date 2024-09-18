@@ -1928,9 +1928,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/code-coverage@npm:3.12.49":
-  version: 3.12.49
-  resolution: "@cypress/code-coverage@npm:3.12.49"
+"@cypress/code-coverage@npm:3.13.1":
+  version: 3.13.1
+  resolution: "@cypress/code-coverage@npm:3.13.1"
   dependencies:
     "@cypress/webpack-preprocessor": "npm:^6.0.0"
     chalk: "npm:4.1.2"
@@ -1947,7 +1947,7 @@ __metadata:
     babel-loader: ^8.3 || ^9
     cypress: "*"
     webpack: ^4 || ^5
-  checksum: 10/72d770c0f30cd63b9aa804470b34ba450f6d98e3710437b093bdb1f868f21554ebf33ed408d042b67b6df4066c7a8d0b222c9f989976a64251a78ed55c47604a
+  checksum: 10/697883f0488dc0c6799897b7c89bfcb9559543d7a2bd861a220bea9648a5dc15019604c94ba62e87b6f87d3d7f13f3190820b88ca1c9d73e2d42e2d9e0e00b1d
   languageName: node
   linkType: hard
 
@@ -8105,7 +8105,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:19.5.0"
     "@commitlint/config-conventional": "npm:19.5.0"
-    "@cypress/code-coverage": "npm:3.12.49"
+    "@cypress/code-coverage": "npm:3.13.1"
     "@emotion/react": "npm:11.13.3"
     "@emotion/styled": "npm:11.13.0"
     "@eslint/compat": "npm:1.1.1"
