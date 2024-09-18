@@ -56,7 +56,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
-    "@cypress/code-coverage": "3.12.49",
+    "@cypress/code-coverage": "3.13.1",
     "@eslint/compat": "1.1.1",
     "@eslint/eslintrc": "3.1.0",
     "@eslint/js": "9.10.0",
