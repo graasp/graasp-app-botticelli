@@ -141,7 +141,10 @@ const ExchangeSettingsPanel: FC<PropTypesSingle> = ({
         {index + 1}
       </Typography>
       <Box sx={{ flex: '1' }}>
-        <Stack spacing={1} p={2} border="1px solid #ccc" borderRadius="8px">
+        <Stack spacing={3} p={2} border="1px solid #ccc" borderRadius="8px">
+          <Typography variant="h6">
+            {exchangeName || `Exchange ${index + 1}`}
+          </Typography>
           <Stack direction="row" spacing={2} alignItems="center">
             <TextField
               value={exchangeName}
@@ -278,20 +281,22 @@ const ExchangeSettingsPanel: FC<PropTypesSingle> = ({
             }
             data-cy={FOLLOW_UP_QUESTIONS_INPUT_CY}
           />
-          <Typography variant="h6">
-            {t('SETTINGS.EXCHANGES.DISABLE_HARD_LIMIT')}
-            {'   '}
-            <Tooltip title={t('SETTINGS.EXCHANGES.HARD_LIMIT_INFO')}>
-              <InfoBadge />
-            </Tooltip>
-          </Typography>
-          <Switch
-            checked={exchangeLimit}
-            onChange={(e: ChangeEvent<HTMLInputElement>): void =>
-              onChange(index, 'hardLimit', e.target.checked)
-            }
-            data-cy={HARD_LIMIT_SWITCH_CY}
-          />
+          <Stack spacing={0}>
+            <Typography variant="body1">
+              {t('SETTINGS.EXCHANGES.DISABLE_HARD_LIMIT')}
+              {'   '}
+              <Tooltip title={t('SETTINGS.EXCHANGES.HARD_LIMIT_INFO')}>
+                <InfoBadge />
+              </Tooltip>
+            </Typography>
+            <Switch
+              checked={exchangeLimit}
+              onChange={(e: ChangeEvent<HTMLInputElement>): void =>
+                onChange(index, 'hardLimit', e.target.checked)
+              }
+              data-cy={HARD_LIMIT_SWITCH_CY}
+            />
+          </Stack>
           {!exchangeLimit && (
             <TextField
               value={exchangeOnComplete}

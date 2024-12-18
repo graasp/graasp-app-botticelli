@@ -251,8 +251,6 @@ const MessagesPane = ({
         display: 'flex',
         flexDirection: 'column',
         backgroundColor: 'white',
-        height: readOnly ? 'fit-content' : '100vh',
-        maxHeight: '100vh',
       }}
       data-cy={MESSAGE_PANE_CY}
     >
@@ -263,7 +261,6 @@ const MessagesPane = ({
           minHeight: 0,
           px: 2,
           py: 3,
-          overflowY: 'scroll',
           flexDirection: 'column-reverse',
         }}
       >

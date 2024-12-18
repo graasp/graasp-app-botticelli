@@ -111,7 +111,10 @@ const AssistantSettingsPanel: FC<PropTypesSingle> = ({
         {index + 1}
       </Typography>
       <Box sx={{ flex: '1' }}>
-        <Stack spacing={1} p={2} border="1px solid #ccc" borderRadius="8px">
+        <Stack spacing={3} p={2} border="1px solid #ccc" borderRadius="8px">
+          <Typography variant="h6">
+            {assistantName || `Assistant ${index + 1}`}
+          </Typography>
           <Stack direction="row" spacing={2} alignItems="center">
             <Avatar
               src={assistantImageUrl}
@@ -289,7 +292,7 @@ const AssistantsSettings: FC<PropTypeList> = ({ assistants, onChange }) => {
         {t('SETTINGS.ASSISTANTS.TITLE')}
       </Typography>
       <Stack
-        spacing={1}
+        spacing={2}
         py={2}
         px={20}
         border="1px solid #ccc"

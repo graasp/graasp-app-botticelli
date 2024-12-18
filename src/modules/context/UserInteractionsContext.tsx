@@ -128,7 +128,7 @@ export const UserInteractionsProvider: FC<{
       setInteraction,
       allInteractionsAppData: isAdmin ? allInteractionsAppData : undefined,
       deleteInteraction,
-      status,
+      status: allInteractionsAppData === undefined ? 'loading' : status,
     }),
     [
       allInteractionsAppData,

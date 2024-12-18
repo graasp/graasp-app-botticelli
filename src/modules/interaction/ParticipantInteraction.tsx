@@ -38,8 +38,11 @@ const ParticipantInteraction = (): ReactElement => {
   // Fetching settings context
   const { chat, exchanges }: SettingsContextType = useSettings();
 
-  const { userInteraction, setInteraction: setSavedInteraction } =
-    useUserInteractions();
+  const {
+    status,
+    userInteraction,
+    setInteraction: setSavedInteraction,
+  } = useUserInteractions();
 
   // Fetching app member context
   const {
@@ -99,9 +102,16 @@ const ParticipantInteraction = (): ReactElement => {
 
   // Update the interaction if the stored value change
   useEffect(() => {
-    if (!isInit && typeof userInteraction !== undefined && isSuccess) {
+    if (
+      !isInit &&
+      typeof userInteraction !== undefined &&
+      isSuccess &&
+      status === 'success'
+    ) {
       setInteraction(
-        userInteraction?.interaction ?? createInteractionFromTemplate(),
+        userInteraction?.interaction && userInteraction?.interaction.started
+          ? userInteraction?.interaction
+          : createInteractionFromTemplate(),
       );
       setIsInit(true);
     }
@@ -110,6 +120,7 @@ const ParticipantInteraction = (): ReactElement => {
     interaction.started,
     isInit,
     isSuccess,
+    status,
     setInteraction,
     userInteraction,
   ]);

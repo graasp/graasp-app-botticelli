@@ -37,7 +37,7 @@ const ChatSettings: FC<PropTypes> = ({ chat, onChange }) => {
   }: ChatSettingsType = chat;
 
   return (
-    <Stack spacing={2}>
+    <Stack spacing={3}>
       <Typography variant="h5" data-cy={CHAT_SETTINGS_TITLE_CY}>
         {t('SETTINGS.CHAT.TITLE')}
       </Typography>
@@ -81,20 +81,22 @@ const ChatSettings: FC<PropTypes> = ({ chat, onChange }) => {
           e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
         ): void => onChange({ ...chat, participantEndText: e.target.value })}
       />
-      <Typography variant="h6">
-        {t('SETTINGS.CHAT.SEND_ALL')}
-        {'   '}
-        <Tooltip title={t('SETTINGS.CHAT.SEND_ALL_INFO')}>
-          <InfoBadge />
-        </Tooltip>
-      </Typography>
-      <Switch
-        checked={chatSendAll}
-        onChange={(e: ChangeEvent<HTMLInputElement>): void =>
-          onChange({ ...chat, sendAllToChatbot: e.target.checked })
-        }
-        data-cy={MESSAGE_MEMORY_SWITCH_CY}
-      />
+      <Stack spacing={0}>
+        <Typography variant="h6">
+          {t('SETTINGS.CHAT.SEND_ALL')}
+          {'   '}
+          <Tooltip title={t('SETTINGS.CHAT.SEND_ALL_INFO')}>
+            <InfoBadge />
+          </Tooltip>
+        </Typography>
+        <Switch
+          checked={chatSendAll}
+          onChange={(e: ChangeEvent<HTMLInputElement>): void =>
+            onChange({ ...chat, sendAllToChatbot: e.target.checked })
+          }
+          data-cy={MESSAGE_MEMORY_SWITCH_CY}
+        />
+      </Stack>
     </Stack>
   );
 };
